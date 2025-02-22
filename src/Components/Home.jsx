@@ -54,7 +54,7 @@ const Home = () => {
       </div>
       <figure className="right-side">
         <img
-          src="./pfp4.png"
+          src="./pfp.png"
           alt="Bilal's Profile"
           className="object-cover pointer-events-none"
         />
