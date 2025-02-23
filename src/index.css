@@ -56,14 +56,26 @@
   font-style: normal;
 }
 
-.highlight {
-  @apply bg-gray-200 px-1 text-black font-bold;
-}
-
 @theme {
   --font-barlow: "barlow", sans-serif;
   --color-blackGradient: linear-gradient(90deg, #000000 0%, #000000 100%);
   --shadow-custom: -5px 5px 11px #d7d7d7;
+}
+
+/* utilities tailwind */
+
+@layer utilities {
+  .contact-icon {
+    @apply mr-2 inline;
+  }
+
+  .quote-icon {
+    @apply text-4xl text-gray-300;
+  }
+
+  .highlight {
+    @apply bg-gray-200 px-1 text-black font-bold;
+  }
 }
 
 /* SkillSet Component Tailwind */
@@ -126,13 +138,4 @@
 
 .contact-list-item {
   @apply text-3xl;
-}
-
-/* Icons tailwind */
-.contact-icon {
-  @apply mr-2 inline;
-}
-
-.quote-icon {
-  @apply text-4xl text-gray-300;
 }

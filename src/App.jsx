@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FiHome } from "react-icons/fi";
 import { RiContactsBook2Fill } from "react-icons/ri";
 import { GrProjects, GrCircleInformation } from "react-icons/gr";
@@ -7,8 +8,10 @@ import Divider from "./Components/ui/Divider";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import SkillSet from "./Components/SkillSet";
+import Note from "./Components/Note";
 
 function App() {
+  const [isNoteOpen, setIsNoteOpen] = useState(true);
   const items = [
     {
       icon: <FiHome size={24} />,
@@ -25,10 +28,12 @@ function App() {
     {
       icon: <GrCircleInformation size={24} />,
       label: "Note",
+      onClick: () => setIsNoteOpen(true),
     },
   ];
   return (
     <>
+      <Note isNoteOpen={isNoteOpen} setIsNoteOpen={setIsNoteOpen} />
       <Dock
         items={items}
         panelHeight={68}

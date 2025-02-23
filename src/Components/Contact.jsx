@@ -9,7 +9,10 @@ import { CiLocationOn } from "react-icons/ci";
 
 const Contact = () => {
   return (
-    <SpotlightCard className="contact-section" spotlightColor="rgba(0, 140, 255, 0.5)">
+    <SpotlightCard
+      className="contact-section"
+      spotlightColor="rgba(0, 140, 255, 0.5)"
+    >
       <h5 className="contact-location">
         <CiLocationOn size={24} className="contact-icon" /> Lahore, Pakistan
       </h5>
@@ -17,7 +20,9 @@ const Contact = () => {
       <div className="contact-list-wrapper">
         <ul className="contact-list">
           <li className="contact-list-item">
-            <AnimatedLink href={"https://thread-112.vercel.app"}>
+            <AnimatedLink
+              href={"https://www.linkedin.com/in/bilal-tahir-a743a12ab/"}
+            >
               <FaLinkedin size={24} className="contact-icon" />
               Linked In
             </AnimatedLink>
@@ -29,7 +34,11 @@ const Contact = () => {
             </AnimatedLink>
           </li>
           <li className="contact-list-item">
-            <AnimatedLink href={"https://mail.google.com/mail/u/0/?fs=1&to=bilaltahir079@gmail.com&tf=cm"}>
+            <AnimatedLink
+              href={
+                "https://mail.google.com/mail/u/0/?fs=1&to=bilaltahir079@gmail.com&tf=cm"
+              }
+            >
               <SiGmail size={24} className="contact-icon" />
               Gmail
             </AnimatedLink>
