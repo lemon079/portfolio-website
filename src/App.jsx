@@ -35,7 +35,7 @@ function App() {
         baseItemSize={50}
         magnification={70}
       />
-      <main className="mx-auto max-w-[1360px]">
+      <main className="mx-auto max-w-[1360px] font-barlow">
         <Home />
         <Divider />
         <SkillSet />
