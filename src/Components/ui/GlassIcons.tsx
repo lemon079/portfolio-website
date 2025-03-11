@@ -1,4 +1,18 @@
-const gradientMapping = {
+import React from "react";
+
+export interface GlassIconsItem {
+  icon: React.ReactElement;
+  color: string;
+  label: string;
+  customClass?: string;
+}
+
+export interface GlassIconsProps {
+  items: GlassIconsItem[];
+  className?: string;
+}
+
+const gradientMapping: Record<string, string> = {
   blue: "linear-gradient(hsl(223, 90%, 50%), hsl(208, 90%, 50%))",
   purple: "linear-gradient(hsl(283, 90%, 50%), hsl(268, 90%, 50%))",
   red: "linear-gradient(hsl(3, 90%, 50%), hsl(348, 90%, 50%))",
@@ -7,8 +21,8 @@ const gradientMapping = {
   green: "linear-gradient(hsl(123, 90%, 40%), hsl(108, 90%, 40%))",
 };
 
-const GlassIcons = ({ items, className }) => {
-  const getBackgroundStyle = (color) => {
+const GlassIcons: React.FC<GlassIconsProps> = ({ items, className }) => {
+  const getBackgroundStyle = (color: string): React.CSSProperties => {
     if (gradientMapping[color]) {
       return { background: gradientMapping[color] };
     }
@@ -16,15 +30,16 @@ const GlassIcons = ({ items, className }) => {
   };
 
   return (
-    <div className={`${className || ""}`}>
+    <div
+      className={`overflow-visible ${className || ""}`}
+    >
       {items.map((item, index) => (
         <button
           key={index}
           type="button"
           aria-label={item.label}
-          className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${
-            item.customClass || ""
-          }`}
+          className={`relative bg-transparent outline-none w-[4.5em] h-[4.5em] [perspective:24em] [transform-style:preserve-3d] [-webkit-tap-highlight-color:transparent] group ${item.customClass || ""
+            }`}
         >
           {/* Back layer */}
           <span
@@ -51,7 +66,7 @@ const GlassIcons = ({ items, className }) => {
           </span>
 
           {/* Label */}
-          <span className="absolute text-lg font-bold top-full left-0 right-0 text-center whitespace-nowrap leading-[2] opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)]">
+          <span className="absolute top-full left-0 right-0 text-center whitespace-nowrap leading-[2] text-base opacity-0 transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.83,0,0.17,1)] translate-y-0 group-hover:opacity-100 group-hover:[transform:translateY(20%)]">
             {item.label}
           </span>
         </button>

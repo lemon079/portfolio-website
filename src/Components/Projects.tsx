@@ -1,4 +1,3 @@
-import React from "react";
 import AnimatedLink from "./ui/AnimatedLink";
 import SpotlightCard from "./ui/SpotlightCard";
 import Heading from "./ui/Heading";
@@ -9,7 +8,6 @@ const Projects = () => {
     <section className="relative">
       <SpotlightCard
         className="project-section text-white"
-        id="projects"
         spotlightColor="rgba(138, 43, 226, 0.5)"
       >
         <Heading className={"project-title"}>Projects</Heading>
@@ -44,7 +42,7 @@ const Projects = () => {
           </ul>
         </div>
       </SpotlightCard>
-      <Connector />
+      {/* <Connector /> */}
     </section>
   );
 };

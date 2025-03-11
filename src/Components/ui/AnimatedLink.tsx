@@ -1,6 +1,12 @@
 import React from "react";
 
-const AnimatedLink = ({
+interface AnimatedLinkProps {
+  href?: string;
+  children: React.ReactNode;
+  underLineColor?: string;
+}
+
+const AnimatedLink: React.FC<AnimatedLinkProps> = ({
   href = "#",
   children,
   underLineColor = "bg-black",
