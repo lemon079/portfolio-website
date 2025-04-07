@@ -9,7 +9,7 @@ import Heading from "./ui/Heading";
 const Contact = () => {
   return (
     <SpotlightCard
-      className="contact-section"
+      className="contact-section my-10"
       spotlightColor="rgba(0, 140, 255, 0.5)"
     >
       <h5 className="contact-location">

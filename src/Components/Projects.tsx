@@ -1,11 +1,10 @@
 import AnimatedLink from "./ui/AnimatedLink";
 import SpotlightCard from "./ui/SpotlightCard";
 import Heading from "./ui/Heading";
-import Connector from "./ui/Connector";
 
 const Projects = () => {
   return (
-    <section className="relative">
+    <section className="relative my-10">
       <SpotlightCard
         className="project-section text-white"
         spotlightColor="rgba(138, 43, 226, 0.5)"
@@ -23,6 +22,14 @@ const Projects = () => {
                   >
                     Threads Clone
                   </AnimatedLink>
+                  <li>
+                    <AnimatedLink
+                      href={"https://jira-clone-112.vercel.app"}
+                      underLineColor="bg-white"
+                    >
+                      Jira Clone
+                    </AnimatedLink>
+                  </li>
                 </li>
               </ul>
             </li>
@@ -37,6 +44,7 @@ const Projects = () => {
                     Sundown Studio Clone
                   </AnimatedLink>
                 </li>
+
               </ul>
             </li>
           </ul>

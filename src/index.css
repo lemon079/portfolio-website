@@ -63,6 +63,10 @@
   --radius-custom: 1.5% 96% 1.5% 100% / 100% 0% 100% 0%;
 }
 
+body {
+  @apply bg-gray-100;
+}
+
 /* utilities tailwind */
 
 @layer utilities {
@@ -78,7 +82,7 @@
 /* SkillSet Component Tailwind */
 
 .skillset-section {
-  @apply relative flex flex-col gap-20 shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 rounded-custom;
+  @apply relative flex flex-col gap-y-10 shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 rounded-custom;
 }
 
 /* Project Component Tailwind */
@@ -126,7 +130,7 @@
 }
 
 .contact-list-wrapper {
-  @apply flex justify-end;
+  @apply flex justify-end mt-10;
 }
 
 .contact-list {

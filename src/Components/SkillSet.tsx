@@ -14,14 +14,14 @@ const SkillSet: React.FC = () => {
   ];
 
   return (
-    <section className="relative">
+    <section className="relative my-10">
       <SpotlightCard className="skillset-section" spotlightColor="gray">
         <Heading className="">
           Tech Stack
         </Heading>
         <ul className="flex items-center justify-end flex-wrap gap-10">
           {items.map((item, index) => (
-            <li key={index} className="flex items-center gap-2 text-3xl">
+            <li key={index} className="flex items-center gap-2 text-xl sm:text-3xl">
               {item.icon} <span>{item.label}</span>
             </li>
           ))}

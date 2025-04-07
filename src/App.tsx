@@ -1,13 +1,11 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import SkillSet from "./Components/SkillSet";
-import { NoteModal } from "./Components/ui/NoteModal";
 import AnimatedCursor from "react-animated-cursor";
 
 function App() {
-  const [isNoteOpen, setIsNoteOpen] = useState(true);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
@@ -45,8 +43,8 @@ function App() {
           ]}
         />
       )}
-      <NoteModal isNoteOpen={isNoteOpen} setIsNoteOpen={setIsNoteOpen} />
-      <main className="min-h-screen mx-auto lg:max-w-7xl font-barlow">
+
+      <main className="mx-auto lg:max-w-7xl font-barlow">
         <Home />
         <SkillSet />
         <Projects />
