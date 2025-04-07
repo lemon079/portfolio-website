@@ -43,7 +43,14 @@ function App() {
           ]}
         />
       )}
-
+      <a
+        href="https://drive.google.com/file/d/1RiXxTjw-fBMTfH_Dczy-TraoT24yDm-A/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-black max-w-32 absolute top-5 right-10 text-white p-2 rounded-md hover:opacity-75 cursor-pointer hover:-translate-y-1 transition"
+      >
+        Resume
+      </a>
       <main className="mx-auto lg:max-w-7xl font-barlow">
         <Home />
         <SkillSet />
