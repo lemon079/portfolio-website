@@ -49,7 +49,7 @@ export const ProjectLink = ({ heading, imgSrc, subheading, href, headingClassNam
             onMouseMove={handleMouseMove}
             initial="initial"
             whileHover="whileHover"
-            className="group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
+            className="group relative flex items-center justify-between border-b-2 border-neutral-600 py-4 transition-colors duration-500 hover:border-neutral-50 md:py-8"
         >
             <div>
                 <motion.span

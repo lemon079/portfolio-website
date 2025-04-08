@@ -1,10 +1,15 @@
-import AnimatedLink from "./ui/AnimatedLink";
 import SpotlightCard from "./ui/SpotlightCard";
 import Heading from "./ui/Heading";
 import { ProjectLink } from "./ui/ProjectLink";
 
 const Projects = () => {
   const projects = [
+    {
+      heading: "Sundown Studio",
+      subheading: "Creative Agency Clone",
+      imgSrc: "/sundown-studio.PNG",
+      href: "https://sundown-studio-112.vercel.app"
+    },
     {
       heading: "Threads",
       subheading: "Social Media Clone",
@@ -29,7 +34,7 @@ const Projects = () => {
         <div className="">
           <ul className="project-list">
             {projects.map((project, index) => (
-              <ProjectLink key={index + 1} heading={project.heading} href={project.href} imgSrc={project.imgSrc} subheading={project.subheading} headingClassName="text-4xl md:text-6xl  text-gray-200 " subheadingClassName="text-gray-300 text-base sm:text-lg" />
+              <ProjectLink key={index + 1} heading={project.heading} href={project.href} imgSrc={project.imgSrc} subheading={project.subheading} headingClassName="text-4xl md:text-5xl text-gray-200 " subheadingClassName="text-gray-300 text-base sm:text-lg" />
             ))}
           </ul>
         </div>
