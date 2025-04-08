@@ -1,8 +1,24 @@
 import AnimatedLink from "./ui/AnimatedLink";
 import SpotlightCard from "./ui/SpotlightCard";
 import Heading from "./ui/Heading";
+import { ProjectLink } from "./ui/ProjectLink";
 
 const Projects = () => {
+  const projects = [
+    {
+      heading: "Threads",
+      subheading: "Social Media Clone",
+      imgSrc: "/threads.PNG",
+      href: "https://thread-112.vercel.app"
+    },
+    {
+      heading: "Jira",
+      subheading: "Project Management Clone",
+      imgSrc: "/jira.PNG",
+      href: "https://jira-clone-112.vercel.app"
+    },
+  ]
+
   return (
     <section className="relative my-10">
       <SpotlightCard
@@ -10,47 +26,14 @@ const Projects = () => {
         spotlightColor="rgba(138, 43, 226, 0.5)"
       >
         <Heading className={"project-title"}>Projects</Heading>
-        <div className="flex justify-end">
+        <div className="">
           <ul className="project-list">
-            <li className="project-category">
-              <h3 className="project-subtitle">Full-Stack:</h3>
-              <ul className="project-inner-list">
-                <li>
-                  <AnimatedLink
-                    href={"https://thread-112.vercel.app"}
-                    underLineColor="bg-white"
-                  >
-                    Threads Clone
-                  </AnimatedLink>
-                  <li>
-                    <AnimatedLink
-                      href={"https://jira-clone-112.vercel.app"}
-                      underLineColor="bg-white"
-                    >
-                      Jira Clone
-                    </AnimatedLink>
-                  </li>
-                </li>
-              </ul>
-            </li>
-            <li className="project-category">
-              <h3 className="project-subtitle">Front-End:</h3>
-              <ul className="project-inner-list">
-                <li>
-                  <AnimatedLink
-                    href={"https://sundown-studio-112.vercel.app"}
-                    underLineColor="bg-white"
-                  >
-                    Sundown Studio Clone
-                  </AnimatedLink>
-                </li>
-
-              </ul>
-            </li>
+            {projects.map((project, index) => (
+              <ProjectLink key={index + 1} heading={project.heading} href={project.href} imgSrc={project.imgSrc} subheading={project.subheading} headingClassName="text-4xl md:text-6xl  text-gray-200 " subheadingClassName="text-gray-300 text-base sm:text-lg" />
+            ))}
           </ul>
         </div>
       </SpotlightCard>
-      {/* <Connector /> */}
     </section>
   );
 };

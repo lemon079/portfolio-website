@@ -82,13 +82,13 @@ body {
 /* SkillSet Component Tailwind */
 
 .skillset-section {
-  @apply relative flex flex-col gap-y-10 shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 rounded-custom;
+  @apply relative flex flex-col gap-y-10 shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 sm:rounded-custom;
 }
 
 /* Project Component Tailwind */
 
 .project-section {
-  @apply shadow-custom bg-gradient-to-r from-black/70 to-black rounded-custom p-10;
+  @apply shadow-custom bg-gradient-to-r from-black/70 to-black sm:rounded-custom p-10;
 }
 
 .custom-spotlight-card {
@@ -118,7 +118,7 @@ body {
 /* Contact Component Tailwind */
 
 .contact-section {
-  @apply shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 rounded-custom;
+  @apply shadow-custom bg-gradient-to-r from-gray-100 to-gray-400 my-28 sm:rounded-custom;
 }
 
 .contact-location {
