@@ -5,7 +5,19 @@ import { ProjectLink } from "./ui/ProjectLink";
 const Projects = () => {
   const projects = [
     {
-      heading: "Sundown Studio",
+      heading: "Fashi-Ecommerce",
+      subheading: "hTML | CSS | SCSS |JS Frontend Project",
+      imgSrc: "/fashi-ecommerce.PNG",
+      href: "https://fashi-ecommerce-112.vercel.app"
+    },
+    {
+      heading: "Villa",
+      subheading: "Learned SASS/SCSS while making this lol",
+      imgSrc: "/villa.PNG",
+      href: "https://villa-project-112.vercel.app"
+    },
+    {
+      heading: "Sundown-Studio",
       subheading: "Creative Agency Clone",
       imgSrc: "/sundown-studio.PNG",
       href: "https://sundown-studio-112.vercel.app"
@@ -31,13 +43,11 @@ const Projects = () => {
         spotlightColor="rgba(138, 43, 226, 0.5)"
       >
         <Heading className={"project-title"}>Projects</Heading>
-        <div className="">
-          <ul className="project-list">
-            {projects.map((project, index) => (
-              <ProjectLink key={index + 1} heading={project.heading} href={project.href} imgSrc={project.imgSrc} subheading={project.subheading} headingClassName="text-4xl md:text-5xl text-gray-200 " subheadingClassName="text-gray-300 text-base sm:text-lg" />
-            ))}
-          </ul>
-        </div>
+        <ul className="project-list">
+          {projects.map((project, index) => (
+            <ProjectLink key={index + 1} className="max-w-xl" heading={project.heading} href={project.href} imgSrc={project.imgSrc} subheading={project.subheading} headingClassName="text-4xl md:text-5xl text-gray-200 " subheadingClassName="text-gray-300 text-base sm:text-lg" />
+          ))}
+        </ul>
       </SpotlightCard>
     </section>
   );

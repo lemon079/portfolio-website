@@ -100,7 +100,7 @@ body {
 }
 
 .project-list {
-  @apply flex flex-col gap-5 justify-center;
+  @apply grid grid-cols-1  sm:grid-cols-2;
 }
 
 .project-category {
