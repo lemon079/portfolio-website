@@ -29,21 +29,22 @@ const Home = () => {
               "Loves Creative Designing",
               "Self-Taught Enthusiast",
             ]}
-            mainClassName="text-3xl sm:text-5xl md:text-5xl lg:text-6xl p-2 uppercase font-bold bg-neutral-200 text-neutral-700 overflow-hidden rounded-custom"
+            mainClassName="text-3xl sm:text-5xl md:text-5xl lg:text-6xl p-2 uppercase font-bold overflow-hidden shadow-md rounded-md"
             staggerFrom={"first"}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
-            exit={{ y: "120%" }}
-            staggerDuration={0.02}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.01}
+            splitBy="words"
             splitLevelClassName="overflow-hidden pb-1"
-            transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            rotationInterval={3000}
+            transition={{ type: "spring", damping: 25, stiffness: 300}}
+            rotationInterval={2000}
           />
-          <div className="relative text-gray-800 mt-7 flex gap-5">
+          <div className="relative mt-7 flex gap-5">
             <div className="quote-icon text-xl">
               <FaQuoteLeft />
             </div>
-            <p className="italic max-w-xl text-md sm:text-xl lg:text-2xl tracking-wide leading-7 sm:leading-relaxed">
+            <p className="max-w-xl text-md sm:text-xl lg:text-2xl tracking-wide leading-7 sm:leading-relaxed">
               I’m a self-taught full-stack developer who loves turning ideas into clean, functional, and user-focused applications. Currently pursuing a Bachelor’s in Computer Science, I’m constantly learning and exploring new tools. Outside the screen, you’ll find me reading or doing calisthenics to stay sharp — mentally and physically
             </p>
 

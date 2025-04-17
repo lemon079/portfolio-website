@@ -3,6 +3,7 @@ import Heading from "./ui/Heading";
 import SpotlightCard from "./ui/SpotlightCard";
 import { RiReactjsLine, RiNodejsLine, RiNextjsLine } from "react-icons/ri";
 import { SiMongodb, SiExpress } from "react-icons/si";
+import SpotlightContainer from "./ui/SpotlightContainer";
 
 const SkillSet: React.FC = () => {
   const items = [
@@ -15,10 +16,7 @@ const SkillSet: React.FC = () => {
 
   return (
     <section className="relative my-10">
-      <SpotlightCard className="skillset-section" spotlightColor="gray">
-        <Heading className="">
-          Tech Stack
-        </Heading>
+      <SpotlightContainer className="skillset-section" title="tech stack">
         <ul className="flex items-center justify-end flex-wrap gap-10">
           {items.map((item, index) => (
             <li key={index} className="flex items-center gap-2 text-xl sm:text-3xl">
@@ -26,7 +24,7 @@ const SkillSet: React.FC = () => {
             </li>
           ))}
         </ul>
-      </SpotlightCard>
+      </SpotlightContainer>
     </section>
   );
 };
