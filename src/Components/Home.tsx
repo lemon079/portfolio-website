@@ -37,20 +37,21 @@ const Home = () => {
             staggerDuration={0.01}
             splitBy="words"
             splitLevelClassName="overflow-hidden pb-1"
-            transition={{ type: "spring", damping: 25, stiffness: 300}}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
             rotationInterval={2000}
           />
           <div className="relative mt-7 flex gap-5">
-            <div className="quote-icon text-xl">
-              <FaQuoteLeft />
-            </div>
-            <p className="max-w-xl text-md sm:text-xl lg:text-2xl tracking-wide leading-7 sm:leading-relaxed">
-              I’m a self-taught full-stack developer who loves turning ideas into clean, functional, and user-focused applications. Currently pursuing a Bachelor’s in Computer Science, I’m constantly learning and exploring new tools. Outside the screen, you’ll find me reading or doing calisthenics to stay sharp — mentally and physically
-            </p>
-
-            <div className="quote-icon self-end text-xl">
-              <FaQuoteRight />
-            </div>
+            <AnimatedContent
+              distance={20}
+              direction="horizontal"
+              reverse={true}
+              config={{ tension: 50, friction: 80 }}
+              initialOpacity={0}
+              animateOpacity
+              scale={1}
+              threshold={0.2}>
+              <p className="max-w-xl text-md sm:text-xl lg:text-2xl tracking-wide leading-7 sm:leading-relaxed border-l-4 pl-4 border-gray-400">I’m a self-taught full-stack developer who loves turning ideas into clean, functional, and user-focused applications. Currently pursuing a Bachelor’s in Computer Science, I’m constantly learning and exploring new tools. Outside the screen, you’ll find me reading or doing calisthenics to stay sharp — mentally and physically</p>
+            </AnimatedContent>
           </div>
         </div>
 
