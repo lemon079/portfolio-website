@@ -14,7 +14,7 @@ const Home = () => {
               distance={20}
               direction="horizontal"
               reverse={true}
-              config={{ tension: 80, friction: 20 }}
+              config={{ tension: 50, friction: 10 }}
               initialOpacity={0}
               animateOpacity
               scale={1}
@@ -45,12 +45,12 @@ const Home = () => {
               distance={20}
               direction="horizontal"
               reverse={true}
-              config={{ tension: 50, friction: 80 }}
+              config={{ tension: 50, friction: 10 }}
               initialOpacity={0}
               animateOpacity
               scale={1}
               threshold={0.2}>
-              <p className="max-w-xl text-md sm:text-xl lg:text-2xl tracking-wide leading-7 sm:leading-relaxed border-l-4 pl-4 border-gray-400">I’m a self-taught full-stack developer who loves turning ideas into clean, functional, and user-focused applications. Currently pursuing a Bachelor’s in Computer Science, I’m constantly learning and exploring new tools. Outside the screen, you’ll find me reading or doing calisthenics to stay sharp — mentally and physically</p>
+              <p className="max-w-xl text-md sm:text-[1.35rem] tracking-wide leading-7 sm:leading-relaxed border-l-4 pl-4 border-gray-400">I’m a self‑taught full‑stack developer passionate about transforming ideas into clean, performant, and user‑centric applications. As a Computer Science student, I continually push my boundaries—learning new frameworks, refining my architecture patterns, and experimenting with AI‑powered tools. I thrive on solving complex challenges, designing for scalability and maintainability, and collaborating end‑to‑end from prototyping through deployment. Let’s build something great together.</p>
             </AnimatedContent>
           </div>
         </div>
