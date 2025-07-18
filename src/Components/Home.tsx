@@ -1,4 +1,3 @@
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import RotatingText from "./ui/RotatingText";
 import { Separator } from "./ui/separator";
 import AnimatedContent from "./ui/AnimatedContent";
@@ -11,7 +10,7 @@ const Home = () => {
         <div className="flex flex-col gap-y-5 items-baseline justify-center gap-4 w-full lg:w-[60%]">
           <span className="text-2xl">
             <AnimatedContent
-              distance={20}
+              distance={10}
               direction="horizontal"
               reverse={true}
               config={{ tension: 50, friction: 10 }}
@@ -42,7 +41,7 @@ const Home = () => {
           />
           <div className="relative mt-7 flex gap-5">
             <AnimatedContent
-              distance={20}
+              distance={10}
               direction="horizontal"
               reverse={true}
               config={{ tension: 50, friction: 10 }}

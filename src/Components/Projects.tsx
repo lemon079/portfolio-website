@@ -6,24 +6,6 @@ import SpotlightContainer from "./ui/SpotlightContainer";
 const Projects = () => {
   const projects = [
     {
-      heading: "Fashi-Ecommerce",
-      subheading: "ecommerce website Frontend Clone",
-      imgSrc: "/fashi-ecommerce.PNG",
-      href: "https://fashi-ecommerce-112.vercel.app"
-    },
-    {
-      heading: "Villa",
-      subheading: "villa buying website frontend Clone",
-      imgSrc: "/villa.PNG",
-      href: "https://villa-project-112.vercel.app"
-    },
-    {
-      heading: "Sundown-Studio",
-      subheading: "Creative Agency Frontend Clone",
-      imgSrc: "/sundown-studio.PNG",
-      href: "https://sundown-studio-112.vercel.app"
-    },
-    {
       heading: "Threads",
       subheading: "Social Media Fullstack Clone",
       imgSrc: "/threads.PNG",
@@ -35,6 +17,25 @@ const Projects = () => {
       imgSrc: "/jira.PNG",
       href: "https://jira-clone-112.vercel.app"
     },
+    {
+      heading: "Sundown-Studio",
+      subheading: "Creative Agency Frontend Clone",
+      imgSrc: "/sundown-studio.PNG",
+      href: "https://sundown-studio-112.vercel.app"
+    },
+    {
+      heading: "Fashi-Ecommerce",
+      subheading: "ecommerce website Frontend Clone",
+      imgSrc: "/fashi-ecommerce.PNG",
+      href: "https://fashi-ecommerce-112.vercel.app"
+    },
+    {
+      heading: "Villa",
+      subheading: "villa buying website frontend Clone",
+      imgSrc: "/villa.PNG",
+      href: "https://villa-project-112.vercel.app"
+    },
+
   ]
 
   return (

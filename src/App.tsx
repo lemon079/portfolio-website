@@ -1,25 +1,38 @@
 import Home from "./Components/Home";
-import Projects from "./Components/Projects";
-import Contact from "./Components/Contact";
-import SkillSet from "./Components/SkillSet";
+import { lazy, Suspense } from "react";
+import Loader from "./Components/ui/Loader";
+
+const SkillSet = lazy(() => import("./Components/SkillSet"))
+const Projects = lazy(() => import("./Components/Projects"))
+const Contact = lazy(() => import("./Components/Contact"))
 
 function App() {
-
   return (
     <>
       <main className="mx-auto lg:max-w-7xl font-barlow">
         <a
-          href="https://drive.google.com/file/d/1i23pK3kpbKrnh8jfOJapLrIEhLno0QZ0/view?usp=sharing"
+          href="https://drive.google.com/file/d/12n3z0SX0xY8INqF6maikCF0KtmKWt6SX/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-black max-w-32 fixed w-16 z-10 text-center top-5 right-10 text-white p-2 rounded-md hover:opacity-75 cursor-pointer hover:-translate-y-1 transition"
         >
           Resume
         </a>
-        <Home />
-        <SkillSet />
-        <Projects />
-        <Contact />
+        <Suspense fallback={<Loader />}>
+          <Home />
+        </Suspense>
+
+        <Suspense fallback={<Loader />}>
+          <SkillSet />
+        </Suspense>
+
+        <Suspense fallback={<Loader />}>
+          <Projects />
+        </Suspense>
+
+        <Suspense fallback={<Loader />}>
+          <Contact />
+        </Suspense>
       </main>
     </>
   );
