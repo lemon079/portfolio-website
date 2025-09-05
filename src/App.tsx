@@ -11,7 +11,7 @@ function App() {
     <>
       <main className="mx-auto lg:max-w-7xl font-barlow">
         <a
-          href="https://drive.google.com/file/d/147hPU5_5amBPLCVosRx8jLC_EL0MbYSm/view?usp=sharing"
+          href="https://drive.google.com/file/d/1IFgDipYyv4LY5dYuHxlPcXBBa8YnLPt8/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-black max-w-32 fixed w-16 z-10 text-center top-5 right-10 text-white p-2 rounded-md hover:opacity-75 cursor-pointer hover:-translate-y-1 transition"
